@@ -1,0 +1,474 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap' );
+
+/* General Styles */
+body {
+    font-family: 'Tajawal', sans-serif;
+    background-color: #fdfdff; /* لون خلفية ناعم جداً */
+}
+
+.navbar-brand img {
+    max-height: 40px;
+}
+
+.section-title {
+    font-weight: 800;
+    color: #2c3e50;
+}
+
+.section-subtitle {
+    color: #7f8c8d;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.9), rgba(23, 162, 184, 0.9)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop' ) no-repeat center center;
+    background-size: cover;
+    padding: 8rem 0;
+    color: white;
+}
+
+.hero-section h1 {
+    font-weight: 800;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.hero-section .lead {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-section .form-control {
+    border: none;
+}
+
+.hero-section .btn-primary {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.hero-section .btn-primary:hover {
+    background-color: #ffca2c;
+    transform: scale(1.05);
+}
+
+/* --- Features Section --- */
+.feature-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(23, 162, 184, 0.1));
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.2);
+}
+
+/* --- Latest Providers Section --- */
+.provider-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.provider-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(44, 62, 80, 0.15) !important;
+}
+
+.provider-card .card-img-top {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin-top: -45px;
+    border: 5px solid white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.provider-card .btn-outline-primary {
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+/* --- Partners Section --- */
+.partners-section {
+    background-color: #f8f9fa;
+}
+
+.partner-logo {
+    max-height: 60px;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 15px;
+}
+
+
+/* أضف هذه التنسيقات الجديدة إلى نهاية ملف style.css الحالي */
+
+/* --- Stats Section --- */
+.stats-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 4rem 0;
+}
+.stats-section .stat-item i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ffc107; /* لون أصفر مميز */
+}
+.stats-section .stat-item h3 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+.stats-section .stat-item p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- How It Works Section --- */
+.how-it-works-section .step-item {
+    position: relative;
+    padding-right: 30px; /* مساحة للخط العمودي */
+}
+.how-it-works-section .step-number {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    color: #212529;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border: 4px solid #f8f9fa;
+}
+.how-it-works-section .step-item:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 2px;
+    height: calc(100% - 40px);
+    background-color: #e9ecef;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+    background-color: #f8f9fa;
+}
+.testimonial-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+}
+.testimonial-card::before {
+    content: '\F646'; /* Bootstrap Icon "quote" */
+    font-family: 'bootstrap-icons';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(13, 110, 253, 0.1);
+    z-index: 1;
+}
+.testimonial-card .card-body {
+    position: relative;
+    z-index: 2;
+}
+.testimonial-card .author-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.testimonial-card .author-name {
+    font-weight: 700;
+    color: #2c3e50;
+}
+.testimonial-card .author-title {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+/*  */
+
+/* أضف هذه التنسيقات الجديدة إلى نهاية ملف style.css الحالي */
+
+/* --- Directory Page --- */
+.directory-header {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.filters-sidebar .card {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.05);
+}
+
+.view-toggle .btn {
+    color: #6c757d;
+}
+.view-toggle .btn.active {
+    color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+/* --- Directory Card (Grid View) --- */
+.directory-card-grid {
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.directory-card-grid:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(44, 62, 80, 0.1);
+    border-color: #0d6efd;
+}
+.directory-card-grid .card-header {
+    background-color: transparent;
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+.directory-card-grid .provider-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+.directory-card-grid .card-body {
+    padding: 1rem 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.directory-card-grid .card-title {
+    font-weight: 700;
+    color: #2c3e50;
+}
+.directory-card-grid .services-tags .badge {
+    font-weight: 500;
+    padding: 0.4em 0.7em;
+    margin: 2px;
+}
+.directory-card-grid .card-footer {
+    background-color: transparent;
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+}
+
+/* --- Directory Card (List View) --- */
+.directory-card-list {
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+}
+.directory-card-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 1rem 2rem rgba(44, 62, 80, 0.1);
+    border-color: #0d6efd;
+}
+.directory-card-list .card-body {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.directory-card-list .provider-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+.directory-card-list .services-tags {
+    flex-wrap: wrap;
+}
+
+/*  */
+/* أضف هذه التنسيقات الجديدة إلى نهاية ملف style.css الحالي */
+
+/* --- Map Page --- */
+.map-page-container {
+    display: flex;
+    height: calc(100vh - 56px); /* ارتفاع الشاشة ناقص ارتفاع الـ Navbar */
+}
+
+.map-sidebar {
+    width: 380px;
+    flex-shrink: 0;
+    background-color: #fff;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.map-sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.map-results-list {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.map-result-item {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.map-result-item:hover {
+    background-color: #f8f9fa;
+}
+.map-result-item.active {
+    background-color: #e9f2ff;
+    border-right: 4px solid #0d6efd;
+}
+.map-result-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.map-container {
+    flex-grow: 1;
+}
+#map-page-map {
+    width: 100%;
+    height: 100%;
+}
+
+/* Leaflet Popup Customization */
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+}
+.leaflet-popup-content {
+    margin: 13px 20px;
+}
+/*  */
+/* ===================================================================
+   Ecosystem Layers Section (القسم الجديد)
+   =================================================================== */
+   .ecosystem-layers-section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* لون خلفية فاتح ومختلف */
+    position: relative;
+    overflow: hidden;
+}
+
+.ecosystem-layers-section .section-title {
+    margin-bottom: 60px;
+}
+
+.layers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.layer-card {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.layer-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.layer-card .layer-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.layer-card .layer-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.layer-card .layer-description {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+/* تخصيص ألوان الأيقونات لكل بطاقة */
+.layer-card.policy .layer-icon { background-color: #0d6efd; } /* Policy */
+.layer-card.finance .layer-icon { background-color: #198754; } /* Finance */
+.layer-card.support .layer-icon { background-color: #ffc107; } /* Support */
+.layer-card.culture .layer-icon { background-color: #dc3545; } /* Culture */
+.layer-card.markets .layer-icon { background-color: #fd7e14; } /* Markets */
+.layer-card.talent .layer-icon { background-color: #6f42c1; } /* Talent */
+
+/* تأثير زخرفي في الخلفية */
+.ecosystem-layers-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -150px;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(45deg, rgba(13, 110, 253, 0.05), transparent);
+    border-radius: 50%;
+    z-index: 0;
+}
+.sunburst-section {
+    background-color: #f8f9fa;
+}

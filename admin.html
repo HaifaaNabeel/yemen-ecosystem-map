@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | خريطة ريادة الأعمال</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar (سيتم حقنه بواسطة JS) -->
+        <aside class="admin-sidebar" id="admin-sidebar-container"></aside>
+
+        <!-- Main Container (Navbar + Content) -->
+        <div class="admin-main-container">
+            <!-- ================== Navbar ================== -->
+            <nav class="admin-navbar">
+                <div class="navbar-left">
+                    <button id="sidebar-toggle-btn"><i class="bi bi-list"></i></button>
+                    <div class="navbar-search d-none d-lg-block">
+                        <input type="text" class="form-control" placeholder="بحث سريع...">
+                    </div>
+                </div>
+                <div class="navbar-right">
+                    <div class="theme-switcher-nav">
+                        <button class="btn" id="light-theme-btn" title="الوضع الفاتح"><i class="bi bi-sun-fill"></i></button>
+                        <button class="btn" id="dark-theme-btn" title="الوضع الداكن"><i class="bi bi-moon-fill"></i></button>
+                    </div>
+                    <a href="#" class="navbar-icon-btn d-none d-sm-block"><i class="bi bi-bell-fill"></i><span class="badge rounded-pill bg-danger">3</span></a>
+                    <div class="dropdown">
+                        <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://i.pravatar.cc/150?u=admin" alt="Admin Profile" class="profile-image">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-start text-small">
+                            <li><a class="dropdown-item" href="#">الملف الشخصي</a></li>
+                            <li><a class="dropdown-item" href="#">الإعدادات</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">تسجيل الخروج</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+
+            <!-- ================== Main Content ================== -->
+            <main class="admin-main-content">
+                    <header class="dashboard-header mb-4">
+                        <h1>لوحة التحكم</h1>
+                        <p>نظرة عامة وسريعة على أداء المنصة.</p>
+                    </header>
+                    <!-- KPI Cards -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-4"><div class="kpi-card"><div class="icon-wrapper" style="background-color: rgba(79, 70, 229, 0.2); color: #818cf8;"><i class="bi bi-grid-fill"></i></div><div><div id="kpi-total-providers" class="kpi-value">0</div><div class="kpi-label">إجمالي الجهات</div></div></div></div>
+                        <div class="col-md-4"><div class="kpi-card"><div class="icon-wrapper" style="background-color: rgba(16, 185, 129, 0.2); color: #34d399;"><i class="bi bi-pin-map-fill"></i></div><div><div id="kpi-total-governorates" class="kpi-value">0</div><div class="kpi-label">محافظة مغطاة</div></div></div></div>
+                        <div class="col-md-4"><div class="kpi-card"><div class="icon-wrapper" style="background-color: rgba(249, 115, 22, 0.2); color: #fb923c;"><i class="bi bi-tags-fill"></i></div><div><div id="kpi-total-sectors" class="kpi-value">0</div><div class="kpi-label">قطاع متنوع</div></div></div></div>
+                    </div>
+                    <!-- Charts -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-5"><div class="chart-card h-100"><h5>توزيع الجهات حسب النوع</h5><div style="height: 300px;"><canvas id="typesChart"></canvas></div></div></div>
+                        <div class="col-lg-7"><div class="chart-card h-100"><h5>عدد الجهات في كل محافظة</h5><div style="height: 300px;"><canvas id="governoratesChart"></canvas></div></div></div>
+                    </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal (فقط في صفحة admin-providers.html ) -->
+    
+    <!-- JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/admin.js"></script>
+</body>
+
+</html>

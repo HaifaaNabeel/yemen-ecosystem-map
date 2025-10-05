@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخريطة التفاعلية | خريطة ريادة الأعمال</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/styleMap.css">
+
+    
+    <style>
+        /* لمنع الـ Navbar من تغطية المحتوى */
+        body { padding-top: 56px; }
+    </style>
+</head>
+<body>
+
+    <!-- ================== Navbar (Fixed ) ================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="https://rowad.org/wp-content/uploads/2023/08/logo-colored.png" alt="شعار مؤسسة رواد"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html">دليل الجهات</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="map.html">الخريطة</a></li>
+                </ul>
+                <a href="admin.html" class="btn btn-outline-primary">أضف جهتك</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================== Map Page Container ================== -->
+    <div class="map-page-container">
+        <!-- Sidebar -->
+        <aside class="map-sidebar">
+            <!-- Header and Filters -->
+            <div class="map-sidebar-header">
+                <h5 class="mb-3">البحث في الخريطة</h5>
+                <form id="map-filter-form">
+                    <div class="input-group mb-2">
+                        <input type="text" id="map-name-filter" class="form-control form-control-sm" placeholder="ابحث بالاسم...">
+                        <button class="btn btn-outline-secondary btn-sm" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <select id="map-service-filter" class="form-select form-select-sm"></select>
+                        </div>
+                        <div class="col-6">
+                            <select id="map-governorate-filter" class="form-select form-select-sm"></select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Results List -->
+            <div class="map-results-list" id="map-results-list">
+                <!-- Results will be injected here by JavaScript -->
+                <div class="p-5 text-center text-muted">
+                    <div class="spinner-border spinner-border-sm" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <p class="mt-2 small">جاري تحميل الجهات...</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Map Container -->
+        <div class="map-container">
+            <div id="map-page-map"></div>
+        </div>
+    </div>
+
+    <!-- JS Files -->
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- استدعاء الملف المشترك أولاً -->
+    <script src="assets/js/main.js"></script>
+    <!-- ثم استدعاء الملف الخاص بالخريطة -->
+    <script src="assets/js/map.js"></script>
+
+</body>
+</html>

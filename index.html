@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خريطة منظومة دعم ريادة الأعمال في اليمن | مؤسسة رواد</title>
+    <meta name="description"
+        content="مرجعك الأول لاكتشاف والتواصل مع الحاضنات، المسرعات، المستثمرين، ومقدمي الخدمات لرواد الأعمال في اليمن.">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ================== Navbar ================== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://rowad.org/wp-content/uploads/2023/08/logo-colored.png" alt="شعار مؤسسة رواد">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-nav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link" href="directory.html">دليل الجهات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="map.html">الخريطة</a></li>
+                </ul>
+                <a href="admin.html" class="btn btn-outline-primary">أضف جهتك</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================== Hero Section ================== -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">اكتشف منظومة ريادة الأعمال في اليمن</h1>
+            <p class="lead col-lg-8 mx-auto mb-4">منصتك الموحدة للعثور على الدعم، التمويل، والإرشاد الذي تحتاجه للانطلاق
+                بمشروعك.</p>
+            <form action="directory.html" method="GET" role="search"
+                class="input-group input-group-lg shadow-lg col-lg-8 mx-auto">
+                <input type="search" name="query" class="form-control" placeholder="مثال: تمويل، تدريب، صنعاء..."
+                    aria-label="البحث عن جهة دعم">
+                <button class="btn btn-primary px-4" type="submit" aria-label="بحث"><i
+                        class="bi bi-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- ================== Main Content ================== -->
+    <main>
+        <!-- ================== Features Section ================== -->
+        <section class="py-5 text-center">
+            <div class="container">
+                <h2 class="section-title mb-3">كل ما تحتاجه في مكان واحد</h2>
+                <p class="section-subtitle mb-5">نوفر لك الأدوات والمعلومات اللازمة للنجاح في رحلتك الريادية.</p>
+                <div class="row g-4">
+                    <div class="col-md-4 feature-card">
+                        <div class="feature-icon"><i class="bi bi-compass-fill"></i></div>
+                        <h4 class="fw-bold">خريطة تفاعلية</h4>
+                        <p class="text-muted">تصفح جميع جهات الدعم بصرياً على خريطة اليمن لتحديد الأقرب إليك.</p>
+                    </div>
+                    <div class="col-md-4 feature-card">
+                        <div class="feature-icon"><i class="bi bi-filter-circle-fill"></i></div>
+                        <h4 class="fw-bold">بحث وفلترة متقدمة</h4>
+                        <p class="text-muted">أوجد الدعم المناسب لمشروعك بسهولة عبر فلاتر ذكية حسب الخدمة، القطاع،
+                            والمحافظة.</p>
+                    </div>
+                    <div class="col-md-4 feature-card">
+                        <div class="feature-icon"><i class="bi bi-file-earmark-person-fill"></i></div>
+                        <h4 class="fw-bold">ملفات تعريفية شاملة</h4>
+                        <p class="text-muted">احصل على كافة التفاصيل حول خدمات كل جهة، برامجها، ومعلومات التواصل.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ... نهاية قسم الـ Hero ... -->
+        </section>
+
+        <!-- ================== Ecosystem Sunburst Chart Section ================== -->
+        <section class="sunburst-section py-5" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-9">
+                        <h2 class="section-title fw-bold">خريطة المنظومة التفاعلية</h2>
+                        <p class="lead text-muted mb-4">
+                            استكشف مكونات منظومة ريادة الأعمال في اليمن عبر هذا المخطط التفاعلي. مرّر الفأرة فوق أي قطاع
+                            لرؤية الجهات الفاعلة فيه.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <!-- الصق الكود هنا وأعطه الأبعاد المناسبة -->
+                        <div id="sunburst-container" style="width: 100%; height:700px; max-width: 800px; margin: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ... بقية أقسام صفحة index.html ... -->
+
+
+
+        <!-- ================== Latest Providers Section ================== -->
+        <section id="latest-providers" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center section-title mb-3">اكتشف أحدث المنضمين</h2>
+                <p class="text-center section-subtitle mb-5">جهات دعم متميزة انضمت مؤخراً إلى شبكتنا لمساعدتك على النمو.
+                </p>
+                <div id="latest-providers-container" class="row">
+                    <div class="col-12 text-center py-5">
+                        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"><span
+                                class="visually-hidden">جاري التحميل...</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Ecosystem Layers Section (القسم الجديد) ================== -->
+        <section class="ecosystem-layers-section">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-8">
+                        <h2 class="section-title fw-bold">طبقات منظومة ريادة الأعمال</h2>
+                        <p class="lead text-muted mb-5">
+                            تتكون منظومة ريادة الأعمال من عدة طبقات متكاملة تعمل معًا لدعم نمو الشركات الناشئة، من
+                            السياسات الحكومية إلى الأسواق والمواهب.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="layers-container">
+                    <!-- 1. Policy Layer -->
+                    <div class="layer-card policy">
+                        <div class="layer-icon"><i class="bi bi-briefcase-fill"></i></div>
+                        <h3 class="layer-title">السياسات والقوانين</h3>
+                        <p class="layer-description">تشمل القوانين والتشريعات الحكومية التي تسهل أو تعيق تأسيس ونمو
+                            الأعمال.</p>
+                    </div>
+
+                    <!-- 2. Finance Layer -->
+                    <div class="layer-card finance">
+                        <div class="layer-icon"><i class="bi bi-cash-coin"></i></div>
+                        <h3 class="layer-title">التمويل</h3>
+                        <p class="layer-description">مصادر رأس المال المتاحة، من التمويل الأصغر إلى الاستثمار الجريء
+                            وصناديق الدعم.</p>
+                    </div>
+
+                    <!-- 3. Support Layer -->
+                    <div class="layer-card support">
+                        <div class="layer-icon"><i class="bi bi-people-fill"></i></div>
+                        <h3 class="layer-title">الدعم المؤسسي</h3>
+                        <p class="layer-description">المنظمات التي تقدم الدعم غير المالي مثل الحاضنات، المسرعات، ومساحات
+                            العمل.</p>
+                    </div>
+
+                    <!-- 4. Culture Layer -->
+                    <div class="layer-card culture">
+                        <div class="layer-icon"><i class="bi bi-lightbulb-fill"></i></div>
+                        <h3 class="layer-title">الثقافة المجتمعية</h3>
+                        <p class="layer-description">مدى تقبل المجتمع للمخاطرة، والاحتفاء بالنجاح، ونشر قصص رواد الأعمال
+                            الملهمة.</p>
+                    </div>
+
+                    <!-- 5. Markets Layer -->
+                    <div class="layer-card markets">
+                        <div class="layer-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h3 class="layer-title">الوصول للأسواق</h3>
+                        <p class="layer-description">سهولة وصول الشركات الناشئة إلى العملاء والأسواق المحلية والإقليمية
+                            والعالمية.</p>
+                    </div>
+
+                    <!-- 6. Talent Layer -->
+                    <div class="layer-card talent">
+                        <div class="layer-icon"><i class="bi bi-person-workspace"></i></div>
+                        <h3 class="layer-title">المواهب ورأس المال البشري</h3>
+                        <p class="layer-description">توفر الكفاءات والمهارات اللازمة في سوق العمل، من المطورين إلى
+                            المسوقين والمدراء.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================== Stats Section (جديد ) ================== -->
+        <section class="stats-section text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Stat 1 -->
+                    <div class="col-md-4 mb-4 mb-md-0 stat-item">
+                        <i class="bi bi-diagram-3-fill"></i>
+                        <h3>+75</h3>
+                        <p>جهة دعم موثوقة</p>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="col-md-4 mb-4 mb-md-0 stat-item">
+                        <i class="bi bi-cash-coin"></i>
+                        <h3>+120</h3>
+                        <p>فرصة تمويل واستثمار</p>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="col-md-4 stat-item">
+                        <i class="bi bi-people-fill"></i>
+                        <h3>+5,000</h3>
+                        <p>رائد أعمال يستخدم المنصة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== How It Works Section (جديد) ================== -->
+        <section class="py-5 how-it-works-section">
+            <div class="container">
+                <h2 class="text-center section-title mb-3">كيف تعمل المنصة؟</h2>
+                <p class="text-center section-subtitle mb-5">في ثلاث خطوات بسيطة، يمكنك إيجاد الدعم الذي تحتاجه.</p>
+                <div class="row g-5 mt-4">
+                    <!-- Step 1 -->
+                    <div class="col-md-4">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <h4 class="fw-bold">ابحث واكتشف</h4>
+                            <p class="text-muted">استخدم البحث المتقدم أو الخريطة التفاعلية لاستكشاف جهات الدعم المتاحة
+                                في منطقتك ومجالك.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="col-md-4">
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <h4 class="fw-bold">قارن واختر</h4>
+                            <p class="text-muted">اطلع على الملفات التعريفية الشاملة وقارن بين الخدمات والبرامج لاختيار
+                                الأنسب لاحتياجاتك.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="col-md-4">
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <h4 class="fw-bold">تواصل وانطلق</h4>
+                            <p class="text-muted">تواصل مباشرة مع الجهة التي اخترتها عبر معلومات الاتصال المتاحة وابدأ
+                                رحلة نجاحك.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Testimonials Section (جديد) ================== -->
+        <section class="py-5 testimonials-section">
+            <div class="container">
+                <h2 class="text-center section-title mb-3">ماذا يقول رواد الأعمال؟</h2>
+                <p class="text-center section-subtitle mb-5">آراء من مستخدمين وجدوا الدعم المناسب لمشاريعهم عبر منصتنا.
+                </p>
+                <div class="row g-4">
+                    <!-- Testimonial 1 -->
+                    <div class="col-lg-6">
+                        <div class="testimonial-card">
+                            <div class="card-body">
+                                <p class="fst-italic">"بفضل هذه المنصة، تمكنت من العثور على حاضنة أعمال في صنعاء ساعدتني
+                                    على تحويل فكرتي إلى شركة ناشئة حقيقية. كانت المنصة هي نقطة البداية!"</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="صورة المستخدم"
+                                        class="author-img me-3">
+                                    <div>
+                                        <p class="author-name mb-0">أحمد القاسمي</p>
+                                        <p class="author-title mb-0">مؤسس، تطبيق "وصّلني"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="col-lg-6">
+                        <div class="testimonial-card">
+                            <div class="card-body">
+                                <p class="fst-italic">"كنت أبحث عن تمويل لمشروعي الزراعي في حضرموت ولم أكن أعرف من أين
+                                    أبدأ. المنصة وفرت لي قائمة بالجهات الممولة وتواصلت معهم بسهولة."</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="صورة المستخدم"
+                                        class="author-img me-3">
+                                    <div>
+                                        <p class="author-name mb-0">فاطمة الحضرمي</p>
+                                        <p class="author-title mb-0">مؤسسة، "مزارع البن الأخضر"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================== Call to Action (CTA ) Section ================== -->
+        <section class="py-5">
+            <div class="container">
+                <div class="cta-section p-5 text-center">
+                    <h2 class="fw-bold mb-3">هل أنت جهة دعم لرواد الأعمال؟</h2>
+                    <p class="lead mb-4">انضم إلى شبكتنا وساهم في بناء مستقبل ريادة الأعمال في اليمن. عرّف الآلاف من
+                        رواد الأعمال بخدماتك وبرامجك.</p>
+                    <a href="admin.html" class="btn btn-warning btn-lg fw-bold">أضف جهتك الآن مجاناً <i
+                            class="bi bi-arrow-left-circle-fill ms-2"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================== Footer ================== -->
+    <footer class="bg-light text-center text-lg-start pt-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4">
+                    <h5 class="text-uppercase fw-bold">خريطة ريادة الأعمال في اليمن</h5>
+                    <p>مبادرة من مؤسسة رواد تهدف إلى توحيد وتسهيل الوصول إلى جميع الفاعلين في منظومة ريادة الأعمال
+                        اليمنية.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold">روابط سريعة</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">من نحن</a></li>
+                        <li><a href="directory.html" class="text-dark">دليل الجهات</a></li>
+                        <li><a href="map.html" class="text-dark">الخريطة</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold">تابعنا</h5><a href="#!"
+                        class="btn btn-outline-primary btn-floating m-1" role="button"><i
+                            class="bi bi-facebook"></i></a><a href="#!" class="btn btn-outline-primary btn-floating m-1"
+                        role="button"><i class="bi bi-twitter"></i></a><a href="#!"
+                        class="btn btn-outline-primary btn-floating m-1" role="button"><i
+                            class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">© 2025 جميع الحقوق محفوظة: <a
+                class="text-dark fw-bold" href="https://rowad.org/">مؤسسة رواد</a></div>
+    </footer>
+
+    <!-- JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Apache ECharts Library -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <script src="assets/js/sunburst-script.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- ملف الجافاسكربت الرئيسي لموقعك -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

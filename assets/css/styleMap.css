@@ -1,0 +1,196 @@
+/* ===================================================================
+   Global Styles & Variables
+   =================================================================== */
+   :root {
+    --primary-color: #0d6efd;
+    --primary-subtle: #e9f2ff;
+    --secondary-color: #6c757d;
+    --light-gray: #f8f9fa;
+    --border-color: #e9ecef;
+    --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+    --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+    --font-family-sans-serif: 'Tajawal', sans-serif; /* استخدام خط أجمل */
+}
+
+body {
+    font-family: var(--font-family-sans-serif);
+    background-color: var(--light-gray);
+}
+
+/* ===================================================================
+   Navbar
+   =================================================================== */
+.navbar-brand img {
+    max-height: 40px;
+}
+
+/* ===================================================================
+   Index Page
+   =================================================================== */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop' ) no-repeat center center;
+    background-size: cover;
+}
+.provider-card { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+.provider-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.provider-card .card-img-top { width: 90px; height: 90px; object-fit: cover; border: 3px solid #fff; box-shadow: var(--shadow-sm); }
+
+/* ===================================================================
+   Directory Page
+   =================================================================== */
+.directory-card-grid { background-color: #fff; border-radius: .75rem; box-shadow: var(--shadow-sm); transition: all .2s ease-in-out; height: 100%; display: flex; flex-direction: column; }
+.directory-card-grid:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.directory-card-grid .card-header { background-color: transparent; border-bottom: 1px solid var(--border-color); }
+.directory-card-grid .card-body { flex-grow: 1; }
+.directory-card-grid .card-footer { background-color: var(--light-gray); border-top: none; border-bottom-left-radius: .75rem; border-bottom-right-radius: .75rem; }
+.provider-logo { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+
+.directory-card-list { background-color: #fff; border-radius: .5rem; box-shadow: var(--shadow-sm); transition: box-shadow .2s ease; }
+.directory-card-list:hover { box-shadow: var(--shadow-md); }
+.directory-card-list .card-body { display: flex; align-items: center; }
+.directory-container.list-view { max-width: 900px; margin-left: auto; margin-right: auto; }
+
+/* ===================================================================
+   Map Page - **تحسينات جمالية شاملة**
+   =================================================================== */
+.map-page-container {
+    display: flex;
+    height: calc(100vh - 56px); /* ارتفاع الشاشة ناقص ارتفاع الـ Navbar */
+}
+
+.map-sidebar {
+    width: 380px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border-left: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.map-sidebar-header {
+    padding: 1.25rem;
+    background-color: var(--light-gray);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.map-results-list {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+/* تخصيص شريط التمرير */
+.map-results-list::-webkit-scrollbar { width: 8px; }
+.map-results-list::-webkit-scrollbar-track { background: var(--light-gray); }
+.map-results-list::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 10px; border: 2px solid var(--light-gray); }
+
+.map-result-item {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.map-result-item:last-child {
+    border-bottom: none;
+}
+.map-result-item:hover {
+    background-color: var(--primary-subtle);
+}
+.map-result-item.active {
+    background-color: var(--primary-subtle);
+    border-right: 4px solid var(--primary-color);
+    padding-right: calc(1.25rem - 4px);
+}
+.map-result-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.map-result-item .result-info {
+    overflow: hidden;
+}
+.map-result-item .result-info h6 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.map-container {
+    flex-grow: 1;
+}
+#map-page-map {
+    width: 100%;
+    height: 100%;
+}
+
+/* أيقونات الخريطة المخصصة */
+.custom-map-icon {
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid #fff;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-map-icon i {
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: 16px;
+}
+
+/* نافذة منبثقة مخصصة */
+.custom-popup .leaflet-popup-content-wrapper {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+.custom-popup .leaflet-popup-content {
+    margin: 0;
+    padding: 0;
+    width: 240px;
+}
+.custom-popup .popup-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+}
+.custom-popup .popup-header h6 {
+    margin: 0;
+    font-weight: bold;
+}
+.custom-popup .popup-body {
+    padding: 1rem;
+}
+.custom-popup .popup-body p {
+    margin: 0 0 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+.custom-popup .popup-footer {
+    padding: 0 1rem 1rem;
+    text-align: center;
+}
+
+/* زر إخفاء/إظهار الشريط الجانبي */
+#sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* سيكون على يسار الشاشة بسبب RTL */
+    z-index: 1001;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+/* عندما يكون الشريط الجانبي مخفياً */
+body.sidebar-collapsed .map-sidebar {
+    transform: translateX(100%); /* تحريكه خارج الشاشة لليمين */
+}

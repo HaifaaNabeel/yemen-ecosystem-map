@@ -1,0 +1,167 @@
+/* ===================================================================
+   Admin Dashboard Styles V4 (Responsive & Refined)
+   =================================================================== */
+
+/* --- 1. Theming Variables --- */
+:root {
+    --admin-bg: #f8f9fa;
+    --admin-surface: #ffffff;
+    --admin-border: #dee2e6;
+    --admin-text-primary: #212529;
+    --admin-text-secondary: #6c757d;
+    --admin-primary: #4f46e5;
+    --admin-accent: #10b981;
+    --admin-shadow: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    --admin-bg: #1a1c23;
+    --admin-surface: #242731;
+    --admin-border: #3a3d4a;
+    --admin-text-primary: #ffffff;
+    --admin-text-secondary: #a0a3b1;
+    --admin-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* --- 2. Global Styles --- */
+body {
+    background-color: var(--admin-bg);
+    color: var(--admin-text-primary);
+    font-family: 'Tajawal', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden; /* منع التمرير الأفقي */
+}
+
+/* --- 3. Layout --- */
+.admin-wrapper { display: flex; }
+.admin-sidebar {
+    width: 260px;
+    background-color: var(--admin-surface);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-left: 1px solid var(--admin-border);
+    transition: transform 0.3s ease; /* تعديل الانتقال */
+    z-index: 1040; /* أعلى من كل شيء */
+}
+.admin-main-container {
+    margin-right: 260px;
+    width: calc(100% - 260px);
+    transition: margin-right 0.3s ease, width 0.3s ease; /* تعديل الانتقال */
+}
+.admin-navbar {
+    height: 70px;
+    background-color: var(--admin-surface);
+    border-bottom: 1px solid var(--admin-border);
+    padding: 0 1.5rem; /* تقليل الحشو قليلاً */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.admin-main-content { padding: 1.5rem; }
+
+/* Collapsed Sidebar State */
+body.sidebar-collapsed .admin-sidebar { transform: translateX(100%); }
+body.sidebar-collapsed .admin-main-container { margin-right: 0; width: 100%; }
+
+/* --- 4. Navbar --- */
+.navbar-left, .navbar-right { display: flex; align-items: center; gap: 1rem; }
+#sidebar-toggle-btn { font-size: 1.25rem; color: var(--admin-text-secondary); background: none; border: none; }
+.navbar-search .form-control { background-color: var(--admin-bg); width: 250px; border-radius: 2rem; }
+.navbar-icon-btn { font-size: 1.25rem; color: var(--admin-text-secondary); position: relative; }
+.navbar-icon-btn .badge { position: absolute; top: -5px; right: -10px; }
+
+/* إصلاح صورة الملف الشخصي */
+.profile-dropdown img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* الأهم لضمان عدم تشوه الصورة */
+}
+.dropdown-menu { background-color: var(--admin-surface); border-color: var(--admin-border); box-shadow: 0 0.5rem 1rem var(--admin-shadow); }
+.dropdown-menu[data-bs-popper] { right: 0; left: auto; } /* لضمان ظهورها على اليسار في RTL */
+.dropdown-menu .dropdown-item { color: var(--admin-text-primary); }
+.dropdown-menu .dropdown-item:hover { background-color: var(--admin-bg); }
+.dropdown-divider { border-top-color: var(--admin-border); }
+
+/* مفتاح الثيمات في الـ Navbar */
+.theme-switcher-nav { display: flex; align-items: center; }
+.theme-switcher-nav .btn { color: var(--admin-text-secondary); font-size: 1.2rem; }
+
+/* --- 5. Sidebar --- */
+.admin-sidebar .sidebar-header { height: 70px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--admin-border); }
+.admin-sidebar .logo img { max-height: 40px; }
+.admin-sidebar .logo img.logo-light { display: var(--logo-light-display, block); }
+.admin-sidebar .logo img.logo-dark { display: var(--logo-dark-display, none); }
+[data-theme="dark"] .logo img.logo-light { --logo-light-display: none; }
+[data-theme="dark"] .logo img.logo-dark { --logo-dark-display: block; }
+
+.admin-sidebar .sidebar-nav { padding: 1rem; flex-grow: 1; overflow-y: auto; }
+.admin-sidebar .nav-title { font-size: 0.75rem; font-weight: bold; color: var(--admin-text-secondary); text-transform: uppercase; padding: 0.5rem 1rem; margin-top: 1rem; }
+.admin-sidebar .nav-link { color: var(--admin-text-secondary); padding: 0.75rem 1rem; margin-bottom: 0.25rem; border-radius: 0.5rem; display: flex; align-items: center; gap: 0.75rem; transition: all 0.2s ease; }
+.admin-sidebar .nav-link:hover { background-color: var(--admin-bg); color: var(--admin-text-primary); }
+.admin-sidebar .nav-link.active { background-color: var(--admin-primary); color: #fff; font-weight: bold; }
+
+/* --- 6. Main Content & Cards --- */
+.kpi-card, .chart-card, .data-table-card { background-color: var(--admin-surface); border: 1px solid var(--admin-border); border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 4px 6px -1px var(--admin-shadow); transition: background-color 0.3s ease, border-color 0.3s ease; }
+.kpi-card .kpi-value { font-size: 1.75rem; } /* تصغير الخط قليلاً */
+
+/* --- 7. Table & Modal --- */
+.table { --bs-table-bg: transparent; --bs-table-border-color: var(--admin-border); --bs-table-color: var(--admin-text-primary); --bs-table-striped-color: var(--admin-text-primary); --bs-table-striped-bg: color-mix(in srgb, var(--admin-bg) 50%, transparent); --bs-table-hover-color: var(--admin-text-primary); --bs-table-hover-bg: color-mix(in srgb, var(--admin-bg) 70%, transparent); }
+.table thead th { color: var(--admin-text-secondary); font-weight: 500; border-bottom-width: 1px; }
+.table td { vertical-align: middle; }
+.table .provider-logo-sm { width: 35px; height: 35px; border-radius: 50%; object-fit: cover; }
+.modal-content { background-color: var(--admin-surface); color: var(--admin-text-primary); border: 1px solid var(--admin-border); border-radius: 0.75rem; }
+.modal-header { border-bottom-color: var(--admin-border); }
+.modal-footer { border-top-color: var(--admin-border); }
+.btn-close { filter: var(--bs-btn-close-white-filter); }
+.form-control, .form-select { background-color: var(--admin-bg); border-color: var(--admin-border); color: var(--admin-text-primary); }
+.form-control:focus, .form-select:focus { background-color: var(--admin-bg); border-color: var(--admin-primary); color: var(--admin-text-primary); box-shadow: 0 0 0 0.25rem color-mix(in srgb, var(--admin-primary) 25%, transparent); }
+
+/* ===================================================================
+   8. Responsiveness
+   =================================================================== */
+@media (max-width: 992px) {
+    .admin-sidebar {
+        transform: translateX(100%); /* إخفاء الشريط الجانبي بشكل افتراضي */
+    }
+    body.sidebar-mobile-open .admin-sidebar {
+        transform: translateX(0); /* إظهار الشريط عند الحاجة */
+    }
+    .admin-main-container {
+        margin-right: 0;
+        width: 100%;
+    }
+    .navbar-search {
+        display: none; /* إخفاء البحث في الشاشات الصغيرة */
+    }
+    .admin-navbar {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kpi-card {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+    }
+    .admin-main-content {
+        padding: 1rem;
+    }
+    .dashboard-header h1 {
+        font-size: 1.5rem;
+    }
+}
+/*  */
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* هذا هو الأهم لمنع تشوه الصورة */
+}
