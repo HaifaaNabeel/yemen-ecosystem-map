@@ -1,0 +1,110 @@
+/* ===================================================================
+   Map Page Styles V2 (Responsive & Refined)
+   =================================================================== */
+
+/* --- 1. Layout --- */
+.map-wrapper {
+    display: flex;
+    height: calc(100vh - 72px); /* ارتفاع الشاشة ناقص ارتفاع الـ Navbar */
+    overflow: hidden; /* منع أي تمرير غير مرغوب فيه */
+}
+
+#map-container {
+    flex-grow: 1; /* اجعل الخريطة تأخذ المساحة المتبقية */
+    height: 100%;
+    background-color: #e9ecef;
+}
+
+.sidebar-panel {
+    width: 380px; /* عرض ثابت للوحة الجانبية */
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease; /* انتقال ناعم للموبايل */
+}
+
+/* --- 2. Sidebar Content --- */
+.sidebar-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+.sidebar-header h4 {
+    margin-bottom: 0.5rem;
+}
+
+.filter-section {
+    padding: 1rem;
+}
+
+.results-section {
+    flex-grow: 1; /* اجعل قائمة النتائج تملأ المساحة المتبقية */
+    overflow-y: auto; /* إضافة شريط تمرير عند الحاجة */
+    padding: 0 1rem 1rem 1rem;
+}
+
+.provider-card-sm {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-bottom: 1px solid #f1f1f1;
+}
+.provider-card-sm:hover, .provider-card-sm.active {
+    background-color: #f8f9fa;
+}
+.provider-card-sm img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 1rem; /* استخدم margin-left في RTL */
+}
+.provider-card-sm .provider-info h6 {
+    margin-bottom: 0.1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+.provider-card-sm .provider-info p {
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* --- 3. Mobile-Specific Styles (الجزء الجديد والمهم) --- */
+.mobile-filter-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1001; /* يجب أن يكون فوق الخريطة */
+    display: none; /* إخفاؤه على الشاشات الكبيرة */
+}
+
+/* ===================================================================
+   4. Responsiveness
+   =================================================================== */
+@media (max-width: 992px) {
+    .sidebar-panel {
+        position: fixed;
+        top: 72px; /* تحت الـ Navbar */
+        right: 0;
+        width: 100%;
+        height: calc(100% - 72px);
+        z-index: 1002; /* أعلى من الزر العائم */
+        transform: translateX(100%); /* إخفاء اللوحة خارج الشاشة */
+        border-left: none;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .sidebar-panel.open {
+        transform: translateX(0); /* إظهار اللوحة عند الحاجة */
+    }
+
+    .mobile-filter-toggle {
+        display: block; /* إظهار الزر العائم على الموبايل */
+    }
+}

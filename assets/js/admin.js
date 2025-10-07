@@ -23,8 +23,8 @@ function loadSidebar() {
     sidebarContainer.innerHTML = `
         <div class="sidebar-header">
             <a class="logo" href="index.html" target="_blank">
-                <img src="https://rowad.org/wp-content/uploads/2023/08/logo-colored.png" alt="شعار رواد - فاتح" class="logo-light">
-                <img src="https://rowad.org/wp-content/uploads/2023/08/logo-colored.png" alt="شعار رواد - داكن" class="logo-dark">
+                <img src="images/rowad_logo.jpeg" alt="شعار رواد - فاتح" class="logo-light">
+                <img src="images/rowad_logo.jpeg" alt="شعار رواد - داكن" class="logo-dark">
             </a>
         </div>
         <nav class="sidebar-nav">
